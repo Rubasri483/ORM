@@ -32,9 +32,9 @@ admin.py
     admin.site.register(Movies,MoviesAdmin)
     
     models.py
-from django.db import models
-from django.contrib import admin
-class Movies(models.Model):
+    from django.db import models
+    from django.contrib import admin
+    class Movies(models.Model):
     NAME=models.CharField(max_length=20)
     PHONE=models.IntegerField()
     Movie_Name=models.CharField(max_length=200)
@@ -44,7 +44,7 @@ class Movies(models.Model):
     Rating=models.FloatField(help_text="From '0.0' to '5.0'")
     
 
-class MoviesAdmin(admin.ModelAdmin):
+    class MoviesAdmin(admin.ModelAdmin):
     list_display=('NAME','PHONE','Movie_Name','Amount','Genre','language','Rating')
 
 '''
